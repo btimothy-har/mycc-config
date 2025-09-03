@@ -1,0 +1,70 @@
+{
+  "cleanupPeriodDays": 180,
+  "env": {
+    "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR": "true"
+  },
+  "permissions": {
+    "allow": [
+      "mcp__browser",
+      "mcp__context7",
+      "Bash(uv:*)"
+    ],
+    "deny": [],
+    "additionalDirectories": [
+      "~/.claude/workspace"
+    ]
+  },
+  "model": "opusplan",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/scripts/git_setup_check.sh"
+          },
+          {
+            "type": "command",
+            "command": "~/.claude/scripts/hook_input.sh"
+          },
+          {
+            "type": "command",
+            "command": "echo The current user is : $USER"
+          },
+          {
+            "type": "command",
+            "command": "echo Git remote at: $(git config --get remote.origin.url)"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/scripts/git_gpg_check.sh"
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "auto|manual",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/scripts/hook_input.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "npx -y @owloops/claude-powerline@latest",
+    "padding": 0
+  },
+  "outputStyle": "Engineer"
+}

@@ -1,0 +1,49 @@
+{
+  "theme": "tokyo-night",
+  "display": {
+    "style": "powerline",
+    "colorCompatibility": "auto",
+    "lines": [
+      {
+        "segments": {
+          "git": {
+            "enabled": true,
+            "showSha": true,
+            "showWorkingTree": true,
+            "showOperation": true,
+            "showTag": false,
+            "showTimeSinceCommit": false,
+            "showStashCount": false,
+            "showUpstream": true,
+            "showRepoName": true
+          }
+        }
+      },
+      {
+        "segments": {
+          "version": { "enabled": true },
+          "model": { "enabled": true },
+          "context": { "enabled": true, "showPercentageOnly": true }
+        }
+      },
+      {
+        "segments": {
+          "block": {
+            "enabled": true,
+            "type": "both",
+            "burnType": "none"
+          },
+          "today": { "enabled": true, "type": "both", "costSource": "official" }
+        }
+      }
+    ]
+  },
+  "budget": {
+    "block": { "amount": 1000.0, "type": "cost", "warningThreshold": 80 },
+    "today": { "amount": 1000.0, "type": "cost", "warningThreshold": 80 }
+  },
+  "modelContextLimits": {
+    "sonnet": 200000,
+    "opus": 200000
+  }
+}
