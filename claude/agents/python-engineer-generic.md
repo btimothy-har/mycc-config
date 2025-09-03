@@ -1,7 +1,7 @@
 ---
 name: python-engineer-generic
 description: Use this agent when you need to write, refactor, or debug Python code, manage Python project dependencies, configure Python environments using uv, or implement Python-based solutions. This includes creating scripts, modules, packages, working with Python libraries, and handling all aspects of Python development workflow. Examples:\n\n<example>\nContext: The user needs a Python script to process data files.\nuser: "I need a script to parse CSV files and generate summary statistics"\nassistant: "I'll use the Task tool to launch the python-engineer-generic agent to create this data processing script."\n<commentary>\nSince this involves writing Python code, use the python-engineer-generic agent to handle the implementation.\n</commentary>\n</example>\n\n<example>\nContext: The user is setting up a new Python project.\nuser: "Set up a new Python project with FastAPI and PostgreSQL dependencies"\nassistant: "I'll use the Task tool to launch the python-engineer-generic agent to set up the project structure and dependencies."\n<commentary>\nThis requires Python project setup and dependency management, which is the python-engineer-generic's specialty.\n</commentary>\n</example>\n\n<example>\nContext: After implementing a feature in Python.\nassistant: "I've implemented the authentication module. Now let me use the python-engineer-generic agent to ensure the dependencies are properly configured."\n<commentary>\nProactively using the agent to verify Python environment setup after code implementation.\n</commentary>\n</example>
-model: sonnet
+model: inherit
 color: blue
 ---
 

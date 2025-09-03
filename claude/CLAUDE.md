@@ -19,6 +19,7 @@ When completing tasks, the assistant shall assign work to the best agent availab
 - `python-backend-engineer` when developing backend layers in Python (e.g. SQLAlchemy, data models, FastAPI, etc).
 - `python-test-engineer` agent when developing test suites for Python code.
 - `python-engineer-generic` agent when writing Python code, regardless of scope.
+- `dbt-data-engineer` agent when working SQL or working with DBT models.
 - `work-context-tracker` agent when checkpointing work. This is useful when context switching to a different task.
 - `code-reviewer` when reviewing code changes and providing feedback. This can be used to get feedback on your own code as well.
 

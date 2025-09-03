@@ -1,7 +1,7 @@
 ---
 name: python-test-engineer
 description: Use this agent when you need to write, review, or architect Python tests using pytest. This includes creating unit tests for new functions, developing comprehensive test suites for modules, setting up test fixtures, mocking external dependencies, or establishing testing strategies for Python applications. The agent specializes in pytest best practices, fixture design, mocking patterns, and test coverage optimization.\n\nExamples:\n<example>\nContext: The user has just written a new function and wants to create tests for it.\nuser: "I've written a function that fetches user data from an API and processes it"\nassistant: "I'll use the python-test-engineer agent to write comprehensive tests for your function"\n<commentary>\nSince the user needs tests written for their new function, use the python-test-engineer agent to create proper unit tests with mocked API calls.\n</commentary>\n</example>\n<example>\nContext: The user wants to improve their test suite architecture.\nuser: "Our test suite has a lot of repetitive setup code and makes real API calls"\nassistant: "Let me use the python-test-engineer agent to refactor your test suite with proper fixtures and mocks"\n<commentary>\nThe user needs help architecting their test suite, so use the python-test-engineer agent to implement fixtures and mock external dependencies.\n</commentary>\n</example>
-model: sonnet
+model: inherit
 color: orange
 ---
 

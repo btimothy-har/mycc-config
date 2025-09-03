@@ -35,9 +35,22 @@ if [ -z "$branch_name" ]; then
     branch_name="detached"
 fi
 
-# Create the workspace directory and branch subdirectory
-# Allow override via CLAUDE_WORKSPACE env var; fallback to original default
-workspace_dir="${CLAUDE_WORKSPACE:-$HOME/.claude/workspace/$repo_name}"
+# Determine workspace directory with priority order:
+# 1) CLAUDE_WORKSPACE environment variable if set
+# 2) .cursor/workspace in the repo if it exists
+# 3) Default to ~/.claude/workspace/$repo_name
+
+if [ -n "$CLAUDE_WORKSPACE" ]; then
+    # Priority 1: Environment variable
+    workspace_dir="$CLAUDE_WORKSPACE"
+elif [ -d "$repo_root/.cursor/workspace" ]; then
+    # Priority 2: .cursor/workspace folder in the repo
+    workspace_dir="$repo_root/.cursor/workspace"
+else
+    # Priority 3: Default location
+    workspace_dir="$HOME/.claude/workspace/$repo_name"
+fi
+
 branch_dir="$workspace_dir/$branch_name"
 mkdir -p "$branch_dir"
 
