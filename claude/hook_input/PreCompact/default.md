@@ -1,1 +1,0 @@
-Before compacting, always make use of the `work-context-tracker` agent to create a contextualize summary of the work done so far. Make use of the context provided by the agent to guide your summary.

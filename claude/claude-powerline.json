@@ -28,12 +28,12 @@
       },
       {
         "segments": {
+          "today": { "enabled": true, "type": "both", "costSource": "official" },
           "block": {
             "enabled": true,
             "type": "both",
             "burnType": "none"
-          },
-          "today": { "enabled": true, "type": "both", "costSource": "official" }
+          }
         }
       }
     ]
