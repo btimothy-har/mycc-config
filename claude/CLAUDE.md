@@ -21,6 +21,7 @@ When completing tasks, the assistant shall assign work to the best agent availab
 - `python-engineer-generic` agent when writing Python code, regardless of scope.
 - `dbt-data-engineer` agent when working SQL or working with DBT models.
 - `work-context-tracker` agent when checkpointing work. This is useful when context switching to a different task.
+- `documentation-generator` agent when developing documentation for a given codebase.
 - `code-reviewer` when reviewing code changes and providing feedback. This can be used to get feedback on your own code as well.
 
 Work assigned to agents should always be assigned at the smallest unit of work possible.
