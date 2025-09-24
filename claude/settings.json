@@ -6,6 +6,7 @@
   },
   "permissions": {
     "allow": [
+      "WebSearch",
       "mcp__browser",
       "mcp__context7",
       "Bash(uv:*)"
