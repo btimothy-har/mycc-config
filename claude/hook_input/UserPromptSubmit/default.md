@@ -1,1 +1,0 @@
-After making large codebase changes, ensure that you've consulted the `code-reviewer` agent to critique your work. Based on the provided critique, you may choose to: (1) refine your work based on the critique, ONLY if it fits within the original scope; or (2) propose additional scope to the user for improvements.
