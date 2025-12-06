@@ -6,22 +6,22 @@
 "plugins": [
     {
       "name": "my-hooks",
-      "source": "./hooks",
+      "source": "./my-hooks",
       "description": "Personal hooks for Claude Code."
     },
     {
       "name": "my-agents",
-      "source": "./agents",
+      "source": "./my-agents",
       "description": "Personal agents for Claude Code."
     },
     {
       "name": "my-commands",
-      "source": "./commands",
+      "source": "./my-commands",
       "description": "Personal commands for Claude Code."
     },
     {
       "name": "my-skills",
-      "source": "./skills",
+      "source": "./my-skills",
       "description": "Personal skills for Claude Code."
     }
   ]
