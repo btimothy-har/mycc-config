@@ -32,31 +32,30 @@ repo_name=$(basename "$repo_root")
 branch_name=$(git -C "$cwd" branch --show-current)
 # If detached HEAD or no branch, use a default
 if [ -z "$branch_name" ]; then
-    branch_name="detached"
+    msg="No branch found"
+    json_output=$(jq -n \
+        --arg decision "block" \
+        --arg reason "$msg" \
+        --arg hookEventName "UserPromptSubmit" \
+        --arg additionalContext "$msg" \
+        '{
+          decision: $decision,
+          reason: $reason,
+          hookSpecificOutput: {
+            hookEventName: $hookEventName,
+            additionalContext: $additionalContext
+          }
+        }')
+    echo "$json_output"
+    exit 2
 fi
 
-# Determine workspace directory with priority order:
-# 1) CLAUDE_WORKSPACE environment variable if set
-# 2) .cursor/workspace in the repo if it exists
-# 3) Default to ~/.claude/workspace/$repo_name
-
-if [ -n "$CLAUDE_WORKSPACE" ]; then
-    # Priority 1: Environment variable
-    workspace_dir="$CLAUDE_WORKSPACE"
-elif [ -d "$repo_root/.cursor/workspace" ]; then
-    # Priority 2: .cursor/workspace folder in the repo
-    workspace_dir="$repo_root/.cursor/workspace"
-else
-    # Priority 3: Default location
-    workspace_dir="$HOME/.claude/workspace/$repo_name"
-fi
-
-branch_dir="$workspace_dir/$branch_name"
-mkdir -p "$branch_dir"
+workspace_dir="$repo_root/.claude/$branch_name"
+mkdir -p "$workspace_dir"
 
 json_output=$(jq -n \
     --arg hookEventName "UserPromptSubmit" \
-    --arg additionalContext "The assistant's workspace is at $branch_dir" \
+    --arg additionalContext "The assistant's workspace is at $workspace_dir" \
     '{
       hookSpecificOutput: {
         hookEventName: $hookEventName,
@@ -64,7 +63,4 @@ json_output=$(jq -n \
       }
     }')
 echo "$json_output"
-exit 2
-
-# All good - continue execution
 exit 0

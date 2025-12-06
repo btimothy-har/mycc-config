@@ -1,0 +1,44 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|clear",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks-scripts/add_context.sh ${CLAUDE_PLUGIN_ROOT}/hooks-scripts/SessionStart.md"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks-scripts/repo_setup.sh"
+          },
+          {
+            "type": "command",
+            "command": "echo The current user is : $USER"
+          },
+          {
+            "type": "command",
+            "command": "echo Git remote at: $(git config --get remote.origin.url)"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks-scripts/git_gpg_check.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

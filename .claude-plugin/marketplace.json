@@ -1,0 +1,13 @@
+{
+"name": "brian-claude-marketplace",
+"owner": {
+  "name": "Brian Har"
+  },
+"plugins": [
+    {
+      "name": "brian-claude-config",
+      "source": "./brian-claude-config",
+      "description": "My personal Claude Code setup."
+    }
+  ]
+}
