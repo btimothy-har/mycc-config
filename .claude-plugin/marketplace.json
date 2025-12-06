@@ -5,9 +5,24 @@
   },
 "plugins": [
     {
-      "name": "brian-claude-config",
-      "source": "./brian-claude-config",
-      "description": "My personal Claude Code setup."
+      "name": "my-hooks",
+      "source": "./hooks",
+      "description": "Personal hooks for Claude Code."
+    },
+    {
+      "name": "my-agents",
+      "source": "./agents",
+      "description": "Personal agents for Claude Code."
+    },
+    {
+      "name": "my-commands",
+      "source": "./commands",
+      "description": "Personal commands for Claude Code."
+    },
+    {
+      "name": "my-skills",
+      "source": "./skills",
+      "description": "Personal skills for Claude Code."
     }
   ]
 }

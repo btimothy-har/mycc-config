@@ -1,0 +1,8 @@
+{
+    "name": "my-agents",
+    "description": "Personal agents for Claude Code.",
+    "version": "1.0.0",
+    "author": {
+        "name": "Brian Har"
+    }
+}
