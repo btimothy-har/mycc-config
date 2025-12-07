@@ -1,1 +1,1 @@
-Remember to leverage the available skills to complete the task assigned. Some skills may need to be used in conjunction with others - always make use of the full skills package.
+Remember to leverage the available skills and agents to complete the task assigned. Some skills may need to be used in conjunction with others - always make use of the full skills package.
