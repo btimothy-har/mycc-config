@@ -20,6 +20,10 @@
           },
           {
             "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks-scripts/add_context.sh ${CLAUDE_PLUGIN_ROOT}/hooks-scripts/UserPromptSubmit.md"
+          },
+          {
+            "type": "command",
             "command": "echo The current user is : $USER"
           },
           {
