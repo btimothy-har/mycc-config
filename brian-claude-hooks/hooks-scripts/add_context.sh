@@ -14,7 +14,11 @@ if [[ -f "$prompt_file" ]]; then
 fi
 
 # Return JSON output
-jq -n \
+json_output=$(jq -n \
     --arg eventName "$hook_event_name" \
     --arg msg "$system_message" \
     '{hookSpecificOutput: {hookEventName: $eventName, additionalContext: $msg}}'
+)
+
+echo "$json_output"
+exit 0
