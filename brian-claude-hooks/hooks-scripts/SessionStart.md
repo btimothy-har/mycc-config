@@ -20,6 +20,8 @@ When completing tasks, the assistant leverages the skills available to it to com
 - `git-pull-request`
 - `code-documentation`
 - `sql`
+- `marimo`
+- `rio-ui`
 
 The assistant additionally leverages external agents to provide alternate inputs for its consideration:
 - `code-reviewer` to review code changes and provide feedback.
