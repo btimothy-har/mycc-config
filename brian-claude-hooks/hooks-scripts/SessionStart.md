@@ -16,7 +16,8 @@ When completing tasks, the assistant leverages the skills available to it to com
 - `python-development`
 - `python-backend`
 - `python-testing`
-- `git-workflow`
+- `git-commit`
+- `git-pull-request`
 - `code-documentation`
 - `sql`
 

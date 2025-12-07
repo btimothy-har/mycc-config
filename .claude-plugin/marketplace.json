@@ -1,27 +1,27 @@
 {
-"name": "brian-claude-marketplace",
+"name": "brian-claude",
 "owner": {
   "name": "Brian Har"
   },
 "plugins": [
     {
-      "name": "my-hooks",
-      "source": "./my-hooks",
+      "name": "brian-claude-hooks",
+      "source": "./brian-claude-hooks",
       "description": "Personal hooks for Claude Code."
     },
     {
-      "name": "my-agents",
-      "source": "./my-agents",
+      "name": "brian-claude-agents",
+      "source": "./brian-claude-agents",
       "description": "Personal agents for Claude Code."
     },
     {
-      "name": "my-commands",
-      "source": "./my-commands",
+      "name": "brian-claude-commands",
+      "source": "./brian-claude-commands",
       "description": "Personal commands for Claude Code."
     },
     {
-      "name": "my-skills",
-      "source": "./my-skills",
+      "name": "brian-claude-skills",
+      "source": "./brian-claude-skills",
       "description": "Personal skills for Claude Code."
     }
   ]
