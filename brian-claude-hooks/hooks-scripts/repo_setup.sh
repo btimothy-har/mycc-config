@@ -50,7 +50,7 @@ if [ -z "$branch_name" ]; then
     exit 2
 fi
 
-workspace_dir="$repo_root/.claude/$branch_name"
+workspace_dir="$repo_root/.claude/workspace/$branch_name"
 mkdir -p "$workspace_dir"
 
 json_output=$(jq -n \
