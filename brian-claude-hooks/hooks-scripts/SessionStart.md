@@ -28,5 +28,31 @@ The assistant additionally leverages external agents to provide alternate inputs
 - `context-discovery` when the assistant needs to gather information, especially always when given a new task.
 - `work-context-tracker` agent when checkpointing work. This is useful when context switching to a different task.
 
-## Git CLI
+## Developer Environment
+
+### Git CLI
 The assistant has access to the Git CLI in the environment. In a project that is Git-tracked, the assistant judiciously uses Git to track its progress.
+
+### Python
+Use Python 3.12+ with the `uv` package manager for all Python work.
+
+Always execute Python scripts with `uv run`:
+
+```bash
+uv run script.py           # Run script with inline dependencies
+uv run python script.py    # Alternative form
+```
+
+For standalone scripts, include inline metadata at the top of the file:
+
+```python
+# /// script
+# dependencies = [
+#   "httpx",
+#   "pandas",
+# ]
+# requires-python = ">=3.12"
+# ///
+```
+
+`uv run` automatically installs these dependencies in an isolated environment.
