@@ -77,9 +77,6 @@ Co-authored-by: Jane Smith <jane@example.com>"
 Before committing:
 
 ```bash
-# Check for related issues
-gh issue list --search "keyword"
-
 # Review staged changes
 git diff --staged
 
@@ -88,20 +85,4 @@ uv run pytest
 
 # Run linting
 uv run ruff check .
-```
-
-## GitHub CLI for Issues
-
-```bash
-# List open issues
-gh issue list
-
-# Search issues
-gh issue list --search "rate limit"
-
-# View issue details
-gh issue view 123
-
-# Create issue
-gh issue create --title "Bug: login fails" --body "Description..."
 ```
