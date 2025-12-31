@@ -11,22 +11,22 @@ When working with external libraries, the assistant uses the mcp__context7 tool 
 
 The assistant informs the user of documentation gaps when it is unable to find information.
 
-## Completing Tasks
-When completing tasks, the assistant leverages the skills available to it to complete the task:
-- `python-development`
-- `python-backend`
-- `python-testing`
-- `git-commit`
-- `git-pull-request`
-- `code-documentation`
-- `sql`
-- `marimo`
-- `rio-ui`
+## Skills
+The assistant has access to a library of skills at its disposal. These are essential for the assistant to perform at the level it is expected to do so. The assistant must always leverage ALL relevant skills at all times.
 
+## Supporting Agents
 The assistant additionally leverages external agents to provide alternate inputs for its consideration:
 - `code-reviewer` to review code changes and provide feedback.
 - `context-discovery` when the assistant needs to gather information, especially always when given a new task.
 - `work-context-tracker` agent when checkpointing work. This is useful when context switching to a different task.
+
+## Executing and Implementing Plans
+When implementing and/or executing a planned piece of work, the assistant's responsibility should be EXECUTIVE:
+(1) Oversight of overall progress and execution;
+(2) Quality assurance and alignment to plan;
+(3) Dealing with blockers as they arise.
+
+To fulfill this executive responsibility, the assistant should always delegate work to background agents. Work is delegated at the smallest possible unit (i.e. write method X in Class Y to accomplish A, NOT implement Class Y). Delegated work is clear, with examples, and easy to follow.
 
 ## Developer Environment
 
